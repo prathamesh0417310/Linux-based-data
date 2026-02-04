@@ -6,7 +6,7 @@ pwd	                Show current directory.	                                  pw
 mkdir	            Create a new directory.	                                  mkdir new_directory
 rmdir	            Remove an empty directory.	                              rmdir empty_directory
 rm	                Delete files or directories.	                            rm file.txt
-touch	              Create an empty file.	                                    touch new_file.txt
+touch	            Create an empty file.	                                    touch new_file.txt
 cp	                Copy files or directories.	                              cp file.txt /path/to/destination
 mv	                Move or rename files.	                                    mv file.txt /path/to/new_location
 cat	                Display file contents.	                                  cat file.txt
