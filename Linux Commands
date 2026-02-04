@@ -1,0 +1,215 @@
+whatis - Find what a command is used for
+wget - Direct download files from the internet
+traceroute - Trace all the network hops to reach the destination
+cd  - change the current directory
+cat - concatenate and display files
+touch - create a new empty file or update the timestamp of an existing file
+ls - list the files and directories in the current directory
+mkdir - create a new directory
+rmdir - remove a directory
+pwd - print the current working directory
+cp - copy files or directories
+mv - move or rename files or directories
+rm - remove files or directories
+man - manual for a command
+htop - an interactive process viewer and system monitor
+zip - Zip files in Linux
+unzip - Unzip files in Linux
+
+
+chmod - change the permissions of a file or directory:
+# The first digit represents the owner of the file/directory
+# The second digit represents the group that the file/directory belongs to
+# The third digit represents all other users
+# 0 (no permission)
+# 1 (execute only)
+# 2 (write only)
+# 3 (write and execute)
+# 4 (read only)
+# 5 (read and execute)
+# 6 (read and write)
+# 7 (read, write, and execute)
+
+chown - change the owner of a file or directory
+tar - create or extract compressed archive files
+gzip - compress files
+gunzip - decompress compressed files
+ssh - connect to a remote server securely
+scp - securely copy files between systems
+ping - test network connectivity
+ifconfig - display or configure network interfaces
+netstat - display network connection information
+route - view or configure network routing tables
+top - display system resource usage and processes
+ps - display information about running processes
+kill [PID]- terminate a process
+
+systemctl - control system services and settings
+# Start the nginx service
+systemctl start nginx
+# Check the status of the nginx service
+systemctl status nginx
+# Stop the nginx service
+systemctl stop nginx
+
+service - control system services
+useradd and usermod - Add a new user or change existing user data
+passwd - change the password for a user
+userdel - delete a user from the system
+su - switch user to become another user
+sudo - execute a command as another user or with elevated privileges
+uptime - display system uptime and load average
+df - display disk space usage
+du - display disk usage by file or directory
+mount [mount /dev/sdb1 /mnt/usb]- mount a file system
+umount - unmount a file system
+date - display or set the system date and time
+whoami - display the current user name
+which - locate a program or command in the system path
+finger [username]- displays all the information about a user
+uname [uname -a]- display system information
+history - display a list of previously executed commands
+echo - display text or variables to the console
+tee [ls | tee file.txt]- redirect output to both a file and the console
+locate - locate any file on the system
+
+sort - sort lines of text in a file or input
+cat file.txt
+# banana
+# orange
+# apple
+sort file.txt
+# apple
+# banana
+# orange
+
+uniq - remove duplicate lines from a file or input
+cat file.txt
+# apple
+# orange
+# banana
+# apple
+# banana
+uniq file.txt
+# apple
+# orange
+# banana
+
+head/tail - display the first/last few lines of a file or input
+# display first 10 lines
+head file.txt
+# display last 10 lines
+tail file.txt
+
+
+
+# File and Directory Commands
+Command             Description	                                              Example
+
+ls	                List directory contents.	                                ls
+cd	                Change directory.	                                        cd /path/to/directory
+pwd	                Show current directory.	                                  pwd
+mkdir	              Create a new directory.	                                  mkdir new_directory
+rmdir	              Remove an empty directory.	                              rmdir empty_directory
+rm	                Delete files or directories.	                            rm file.txt
+touch	              Create an empty file.	                                    touch new_file.txt
+cp	                Copy files or directories.	                              cp file.txt /path/to/destination
+mv	                Move or rename files.	                                    mv file.txt /path/to/new_location
+cat	                Display file contents.	                                  cat file.txt
+nano / vim	        Edit files in terminal.	                                  nano file.txt
+find	              Search for files in a directory hierarchy.	              find . -name "file.txt"
+grep	              Search text using patterns.	                              grep "pattern" file.txt
+tar	                Archive and compress files.	                              tar -cvf archive.tar file1.txt file2.txt
+df	                Show disk usage of file systems.	                        df
+du	                Show directory/file size.	                                du -sh /path/to/directory
+chmod	              Change file permissions.	                                chmod 755 file.txt
+chown	              Change file owner.	                                      chown user:group file.txt
+mount	              Mount a filesystem.	                                      mount /dev/sdb1 /mnt
+umount	            Unmount a filesystem.	                                    umount /mnt
+
+
+# Networking Commands
+Command	            Description	                                              Sample Usage
+
+ping	              Test connectivity to a host.	                            ping google.com
+ifconfig / ip a	    Display network interfaces.	                              ifconfig or ip a
+netstat / ss	      Show network connections.	                                netstat -tuln or ss -tuln
+wget	              Download files via HTTP/FTP.	                            wget http://example.com/file.zip
+curl	              Transfer data using URL syntax.	                          curl -O http://example.com/file.zip
+nc (Netcat)	        Network debugging and data transfer.	                    nc -zv 192.168.1.1 80
+tcpdump	            Capture and analyze network packets.	                    tcpdump -i eth0
+iptables	          Configure firewall rules.	                                iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+traceroute	        Trace the path packets take to a network host.	          traceroute example.com
+nslookup	          Query DNS to obtain domain name or IP address mapping.	  nslookup example.com
+ssh	                Securely connect to a remote host.	                      ssh user@example.com
+
+
+# Process and System Monitoring Commands
+Command	            Description	                                              Example Command
+
+ps	                Show running processes.	                                  ps aux
+top	                Dynamic process viewer.	                                  top
+htop	              Enhanced version of top.	                                htop
+kill	              Send a signal to a process.	                              kill <PID>
+killall	            Kill processes by name.	                                  killall <process_name>
+uptime	            System uptime and load.	                                  uptime
+whoami	            Current logged-in user.	                                  whoami
+env	                Display environment variables.	                          env
+strace	            Trace system calls of a process.	                        strace -p <PID>
+systemctl	          Manage systemd services.	                                systemctl status <service_name>
+journalctl	        View system logs.	                                        journalctl -xe
+free	              Display memory usage.	                                    free -h
+vmstat	            Report virtual memory statistics.	                        vmstat 1
+iostat	            Report CPU and I/O statistics.	                          iostat
+lsof	              List open files by processes.	                            lsof
+dmesg	              Print kernel ring buffer messages.	                      dmesg
+
+
+User and Permission Management Commands
+Command	            Description	                                              Example Command
+passwd	            Change user password.	passwd <username>
+adduser / useradd	  Add a new user.	adduser <username> or useradd <username>
+deluser / userdel	  Delete a user.	deluser <username> or userdel <username>
+usermod	            Modify user account.	usermod -aG <group> <username>
+groups	            Show group memberships.	groups <username>
+sudo	              Execute commands as root.	sudo <command>
+chage	              Change user password expiry information.	chage -l <username>
+id	                Display user identity information.	id <username>
+newgrp	            Log in to a new group.	newgrp <group>
+
+
+File Transfer and Synchronization Commands
+Command	            Description	                                              Example Command
+scp	                Securely copy files over SSH.	scp user@remote:/path/to/file /local/destination
+rsync	              Efficiently sync files and directories.	rsync -avz /local/directory/ user@remote:/path/to/destination
+ftp	                Transfer files using the File Transfer Protocol.	ftp ftp.example.com
+sftp	              Securely transfer files using SSH File Transfer Protocol.	sftp user@remote:/path/to/file
+wget	              Download files from the web.	wget http://example.com/file.zip
+curl	              Transfer data from or to a server.	curl -O http://example.com/file.zip
+
+
+Text Processing Commands
+Command	Description	Example Command
+awk	Pattern scanning and processing.	awk '{print $1}' file.txt
+sed	Stream editor for filtering/modifying text.	sed 's/old/new/g' file.txt
+cut	Remove sections from lines of text.	cut -d':' -f1 /etc/passwd
+sort	Sort lines of text.	sort file.txt
+grep	Search for patterns in text.	grep 'pattern' file.txt
+wc	Count words, lines, and characters.	wc -l file.txt
+paste	Merge lines of files.	paste file1.txt file2.txt
+join	Join lines of two files on a common field.	join file1.txt file2.txt
+head	Output the first part of files.	head -n 10 file.txt
+tail	Output the last part of files.	tail -n 10 file.txt
+Shell Utilities and Shortcuts Commands
+Command	Description	Example Command
+alias	Create shortcuts for commands.	alias ll='ls -la'
+unalias	Remove an alias.	unalias ll
+history	Show previously entered commands.	history
+clear	Clear the terminal screen.	clear
+reboot	Reboot the system.	reboot
+shutdown	Power off the system.	shutdown now
+date	Display or set the system date and time.	date
+echo	Display a line of text.	echo "Hello, World!"
+sleep	Delay for a specified amount of time.	sleep 5
+time	Measure the duration of command execution.	time ls
+watch	Execute a program periodically, showing output fullscreen.	watch -n 5 df -h
